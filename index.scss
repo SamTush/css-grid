@@ -68,6 +68,14 @@ body {
   .section-c {
     grid-area: c;
   }
+
+  .section-d {
+    grid-area: d;
+  }
+
+  .section-e {
+    grid-area: e;
+  }
   
   .section-grid {
     grid-row: span 10;
@@ -95,7 +103,9 @@ body {
 
     .section-a,
     .section-b,
-    .section-c {
+    .section-c,
+    .section-d,
+    .section-e {
       background-color: $primary-color;
       border-radius: 0.1em;
       display: flex;
@@ -120,15 +130,15 @@ body {
         'a a a a a a a a a a a a'
         'a a a a a a a a a a a a'
         'a a a a a a a a a a a a'
-        'a a a a a a a a a a a a'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
-        'b b b b b b b c c c c c'
+        'b b b b b b b b e e e e'
+        'b b b b b b b b e e e e'
+        'b b b b b b b b e e e e'
+        'b b b b b b b b e e e e'
+        'b b b b b b b b e e e e'
+        'c c c c d d d d e e e e'
+        'c c c c d d d d e e e e'
+        'c c c c d d d d e e e e'
+        'c c c c d d d d e e e e'
       ;
     }
   }
