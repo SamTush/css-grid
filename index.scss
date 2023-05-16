@@ -41,10 +41,12 @@ body {
 
 .main {
   header,
-  section,
   footer {
     background-color: $primary-color;
     color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   header {
@@ -54,14 +56,36 @@ body {
     justify-content: center;
     border-radius: 0.1em;
   }
+
+  .section-left {
+    grid-area: left;
+  }
+
+  .section-right {
+    grid-area: right;
+  }
   
-  section {
+  .section-grid {
     grid-row: span 10;
     width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+      'left left left left left left left left left left left left'
+      'right right right right right right right right right right right right' 
+    ;
+    gap: 0.4em;
     border-radius: 0.1em;
+    color: $white;
+
+    .section-right,
+    .section-left {
+      background-color: $primary-color;
+      border-radius: 0.1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   footer {
@@ -70,5 +94,16 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 0.1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    .section-grid {
+      grid-template-areas: 
+        'left left left right right right right right right right right right'
+        'left left left right right right right right right right right right'
+      ;
+    }
   }
 }
