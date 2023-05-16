@@ -57,12 +57,16 @@ body {
     border-radius: 0.1em;
   }
 
-  .section-left {
-    grid-area: left;
+  .section-a {
+    grid-area: a;
   }
 
-  .section-right {
-    grid-area: right;
+  .section-b {
+    grid-area: b;
+  }
+
+  .section-c {
+    grid-area: c;
   }
   
   .section-grid {
@@ -70,16 +74,28 @@ body {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     grid-template-areas: 
-      'left left left left left left left left left left left left'
-      'right right right right right right right right right right right right' 
+      'a a a a a a a a a a a a'
+      'a a a a a a a a a a a a'
+      'a a a a a a a a a a a a'
+      'a a a a a a a a a a a a'
+      'b b b b b b b b b b b b'
+      'b b b b b b b b b b b b'
+      'b b b b b b b b b b b b'
+      'b b b b b b b b b b b b'
+      'b b b b b b b b b b b b'
+      'c c c c c c c c c c c c'
+      'c c c c c c c c c c c c'
+      'c c c c c c c c c c c c' 
     ;
     gap: 0.4em;
     border-radius: 0.1em;
     color: $white;
 
-    .section-right,
-    .section-left {
+    .section-a,
+    .section-b,
+    .section-c {
       background-color: $primary-color;
       border-radius: 0.1em;
       display: flex;
@@ -101,8 +117,18 @@ body {
   .main {
     .section-grid {
       grid-template-areas: 
-        'left left left right right right right right right right right right'
-        'left left left right right right right right right right right right'
+        'a a a a a a a a a a a a'
+        'a a a a a a a a a a a a'
+        'a a a a a a a a a a a a'
+        'a a a a a a a a a a a a'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
+        'b b b b b b b c c c c c'
       ;
     }
   }
